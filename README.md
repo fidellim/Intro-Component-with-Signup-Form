@@ -74,7 +74,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Background Image with Color](https://stackoverflow.com/questions/8195215/css-background-image-on-background-color) - Gave me an idea on how to implement background image with color.
 
 ## Author
 

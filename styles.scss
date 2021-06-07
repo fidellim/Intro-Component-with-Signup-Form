@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 // primary
-$red: hsl(0, 100%, 74%);
-$green: hsl(154, 59%, 51%);
+$red: rgb(255, 122, 122);
+$green: rgb(56, 204, 140);
 
 // accent
 $blue: hsl(248, 32%, 49%);
 
 // neutral
-$darkBlue: hsl(249, 10%, 26%);
-$grayishBlue: hsl(246, 25%, 77%);
+$darkBlue: rgb(62, 60, 73);
+$grayishBlue: rgb(185, 182, 211);
 
 // font-family
 $poppins: "Poppins", sans-serif;
@@ -17,10 +17,228 @@ $poppins: "Poppins", sans-serif;
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: 0;
+	box-sizing: border-box;
 }
 
 body {
 	font-size: 16px;
 	font-family: $poppins;
+	text-align: center;
+	background: url(./images/bg-intro-mobile.png), $red;
+	background-size: cover;
+}
+
+.container {
+	margin: 5rem 0 3.5rem 0;
+}
+
+.left-side {
+	color: white;
+	h1 {
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+		padding: 0 5rem;
+	}
+	p {
+		font-size: 0.9rem;
+		margin-bottom: 3rem;
+		padding: 0 3rem;
+	}
+}
+
+.right-side {
+	z-index: 1;
+	.subscription {
+		margin: 0 1rem;
+		padding: 1rem 4rem;
+		background-color: $blue;
+		font-size: 0.75rem;
+		margin-bottom: 1.25rem;
+		border-radius: 5px;
+		position: relative;
+		h2 {
+			font-weight: 500;
+			color: $grayishBlue;
+		}
+		span {
+			font-weight: 700;
+			color: white;
+		}
+	}
+
+	.subscription::after {
+		content: " ";
+		position: absolute;
+		bottom: -0.5rem;
+		left: 0;
+		height: 0.75rem;
+		width: 100%;
+		background-color: rgba(62, 60, 73, 0.3);
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		z-index: -1;
+	}
+
+	.form-container {
+		background-color: white;
+		margin: 0 1rem;
+		padding: 1rem;
+		border-radius: 7px;
+		position: relative;
+
+		input[type="text"],
+		input[type="password"] {
+			border: 1px solid $grayishBlue;
+			padding: 1rem;
+			margin-bottom: 0.25rem;
+			border-radius: 4px;
+			width: 100%;
+		}
+
+		button {
+			text-transform: uppercase;
+			width: 100%;
+			padding: 1rem 0;
+			border: 0;
+			font-weight: 700;
+			color: white;
+			border-radius: 4px;
+			background-color: $green;
+			position: relative;
+			margin-bottom: 0.75rem;
+			cursor: pointer;
+		}
+
+		button::after {
+			content: " ";
+			position: absolute;
+			bottom: -0.2rem;
+			left: 0;
+			height: 0.4rem;
+			width: 100%;
+			background-color: rgba(32, 124, 84, 0.8);
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			z-index: -1;
+		}
+	}
+
+	.form-container::after {
+		content: " ";
+		position: absolute;
+		bottom: -0.5rem;
+		left: 0;
+		height: 1rem;
+		width: 100%;
+		background-color: rgba(62, 60, 73, 0.25);
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		z-index: -1;
+	}
+
+	p {
+		color: $grayishBlue;
+		font-size: 0.55rem;
+		padding: 0 3.5rem;
+		line-height: 2;
+	}
+
+	a {
+		text-decoration: none;
+		font-weight: 700;
+		color: $red;
+	}
+
+	::placeholder {
+		color: $darkBlue;
+		font-weight: 700;
+	}
+}
+
+.firstNameContainer,
+.secondNameContainer,
+.emailContainer,
+.passwordContainer {
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-100%, 50%);
+		visibility: hidden;
+	}
+}
+
+.firstNameContainer div,
+.secondNameContainer div,
+.emailContainer div,
+.passwordContainer div {
+	margin-bottom: 1rem;
+
+	p {
+		text-align: right;
+		padding: 0;
+		font-style: italic;
+		color: $red;
+		display: none;
+	}
+}
+
+.buttonContainer {
+	position: relative;
+	z-index: 1;
+}
+
+@media (min-width: 768px) {
+	body {
+		background: url(./images/bg-intro-desktop.png), $red;
+		text-align: left;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container {
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 0 1rem;
+		width: auto;
+		flex-shrink: 1;
+	}
+
+	.left-side {
+		width: 490px;
+		h1 {
+			font-size: 2.5rem;
+			padding: 0;
+		}
+		p {
+			padding: 0;
+		}
+	}
+	.right-side {
+		width: 450px;
+		.subscription {
+			text-align: center;
+			margin: 0 0;
+			padding: 1rem 0;
+			background-color: $blue;
+			font-size: 0.5rem;
+			margin-bottom: 1.75rem;
+		}
+
+		.form-container {
+			margin: 0;
+			padding: 2rem;
+
+			.terms {
+				padding: 0;
+				text-align: center;
+			}
+		}
+	}
 }
