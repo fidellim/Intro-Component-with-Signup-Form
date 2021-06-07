@@ -80,6 +80,10 @@ body {
   border-radius: 4px;
   width: 100%;
 }
+.right-side .form-container input[type=text]:active,
+.right-side .form-container input[type=password]:active {
+  border: 1px solid #3e3c49;
+}
 .right-side .form-container button {
   text-transform: uppercase;
   width: 100%;
