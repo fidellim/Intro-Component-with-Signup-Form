@@ -12,7 +12,7 @@ const emailErrorText = document.querySelector(".emailErrorText");
 const passwordErrorIcon = document.querySelector(".passwordErrorIcon");
 const passwordErrorText = document.querySelector(".passwordErrorText");
 
-const regex = /^[A-Za-z0-9]+@[a-z]{3,}.[a-z]{3,}$/;
+const regex = /^[A-Za-z0-9]+@[a-z]{3,}\.[a-z]{3,}$/;
 
 formSubmit.addEventListener("submit", (e) => {
 	e.preventDefault(); //prevent refresh of page
@@ -37,19 +37,28 @@ formSubmit.addEventListener("submit", (e) => {
 		lastNameInput.style.border = "1px solid rgb(185, 182, 211)";
 	}
 
+	console.log(emailInput.placeholder);
 	if (emailInput.value.trim() === "") {
 		emailErrorIcon.style.visibility = "visible";
 		emailErrorText.style.display = "block";
+		emailInput.style.color = "black";
+		emailInput.style.fontWeight = "400";
 		emailErrorText.innerHTML = "Email cannot be empty";
 		emailInput.style.border = "2px solid rgb(255, 122, 122)";
 	} else if (!regex.test(emailInput.value.trim())) {
 		emailErrorIcon.style.visibility = "visible";
 		emailErrorText.style.display = "block";
+		emailInput.value = "email@example/com";
+		emailInput.style.color = "rgb(255, 122, 122)";
+		emailInput.style.fontWeight = "700";
 		emailErrorText.innerHTML = "Looks like this is not an email";
 		emailInput.style.border = "2px solid rgb(255, 122, 122)";
 	} else {
 		emailErrorIcon.style.visibility = "hidden";
 		emailErrorText.style.display = "none";
+		// emailInput.value = "email@example/com";
+		emailInput.style.color = "black";
+		emailInput.style.fontWeight = "400";
 		emailInput.style.border = "1px solid rgb(185, 182, 211)";
 	}
 
