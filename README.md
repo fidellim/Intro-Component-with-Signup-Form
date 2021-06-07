@@ -29,52 +29,44 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/Solution%20PC.png)
+![](./images/Solution%20PC%20Error.png)
+![](./images/Solution%20Mobile.png)
+![](./images/Solution%20Mobile%20Error.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/fidellim/Intro-Component-with-Signup-Form)
+- Live Site URL: [Live Site](https://gracious-babbage-267216.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SASS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+A better way of adding an image combining it with background color.
 
 ```css
-.proud-of-this-css {
-	color: papayawhip;
+body {
+	background: url(./images/bg-intro-mobile.png), $red;
 }
-```
-
-```js
-const proudOfThisFunc = () => {
-	console.log("🎉");
-};
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+To continue practicing SASS.
 
 ### Useful resources
 
 - [Background Image with Color](https://stackoverflow.com/questions/8195215/css-background-image-on-background-color) - Gave me an idea on how to implement background image with color.
+- [Stack Elements using Z-index](https://stackoverflow.com/questions/3032856/is-it-possible-to-set-the-stacking-order-of-pseudo-elements-below-their-parent-e) - To have an idea on how to stack elements using z-index
 
 ## Author
 
